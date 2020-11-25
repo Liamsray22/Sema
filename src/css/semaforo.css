@@ -1,0 +1,18 @@
+.semaforo{
+    background-color: black;
+    width: auto;
+    height: auto;
+    display: flex;
+    color: aliceblue;
+}
+
+.items{
+    margin-left: 40%;
+    /* padding-right: 50%; */
+}
+h1{
+margin:0;
+padding: 0; 
+position: absolute;   
+}
+

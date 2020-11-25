@@ -1,23 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import Semaforo from './Components/semaforo'
+import React, {useState,useEffect} from 'react'
 
 function App() {
+  const [active, setActive] = useState(false)
+  const [active2, setActive2] = useState(false)
+  const [active3, setActive3] = useState(true)
+  const [color, setColor] = useState(0)
+
+  useEffect(()=>{
+    setTimeout(()=>{
+    if(color==0){
+        setColor(1)
+        setActive(true)
+        setActive2(false)
+        setActive3(false)
+    }
+    else if(color==1){
+        setColor(2)
+        setActive2(true)
+        setActive(false)
+        setActive3(false)
+
+    }
+    else if(color==2){
+        setColor(0)
+        setActive3(true)
+        setActive2(false)
+        setActive(false)
+
+    }
+
+},5000)
+},[color])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Semaforo color={color} activate={active3}/>
+      <Semaforo color={color} activate={active}/>
+      <Semaforo color={color} activate={active2}/>
     </div>
   );
 }
