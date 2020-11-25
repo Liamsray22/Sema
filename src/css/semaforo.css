@@ -3,16 +3,37 @@
     width: auto;
     height: auto;
     display: flex;
+    flex: auto;
     color: aliceblue;
 }
+@font-face{
+    font-family: FuenteDigital;
+    src:url(../Components/fuentes/DS-DIGI.TTF);
+}
+@font-face{
+    font-family: FuenteDigitalBold;
+    src:url(../Components/fuentes/DS-DIGIB.TTF);
+}
+@font-face{
+    font-family: FuenteDigitalItalica;
+    src:url(../Components/fuentes/DS-DIGII.TTF);
+}
+@font-face{
+    font-family: FuenteDigitalItalicaBold;
+    src:url(../Components/fuentes/DS-DIGIT.TTF);
+}
 
-.items{
+.foto{
     margin-left: 40%;
     /* padding-right: 50%; */
 }
-h1{
-margin:0;
-padding: 0; 
-position: absolute;   
+
+.texto{
+    font-family: FuenteDigitalItalica;
+    font-size: 30px;
+    margin-top: 2%;
+    margin-left: 2%;
+    display:inline-block;
 }
+
 

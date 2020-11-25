@@ -13,15 +13,20 @@ img = Colors[3]
 
 // useEffect(()=>{
 // setInterval(()=>{setTime(time+1)},1000)
-
 // },[time])
 
 return(
     <div className="semaforo">
-        <div className="items">
+        <div className="foto">
     <img src={img||Colors[props.color]} width="200px" height="200px"/>
-    {/* <h1>{time}</h1> */}
     </div>
+{(props.activate)?
+    <div className="texto">
+    <h1>{props.time}</h1>
+    </div>
+    :
+    ''
+}
     </div>
 )
 
