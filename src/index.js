@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+//import { Connector } from 'mqtt-react';
+
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  //<Connector mqttProps='mqtt://localhost:1234'>
+      <App />
+  //</Connector>
+  ,
   document.getElementById('root')
 );
 
