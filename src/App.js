@@ -24,7 +24,7 @@ function App() {
 
   axios.get('http://localhost:3001/Semaforo').then(
     function (response) {
-    if(response.data == "Me presione" && color ==0){
+    if(response.data == "Me presione"){
       console.log(response.data)
       window.location.reload()
     }
@@ -57,9 +57,9 @@ function App() {
         setActive2(false)
         setActive(false)
         setSeconds(3000)
+        //Post cuando va a cambiar a verde
         axios.post('http://localhost:3001/Bocina', {mensaje:"verde"}).then(
           function (response) {
-          //console.log(response.data)
         }).catch(
           function (error) {
           console.log(error);
@@ -73,9 +73,9 @@ function App() {
 
   return (
     <div className="App">
-      <Semaforo time ={tiempo} color={color} activate={active3}/>
-      <Semaforo time ={tiempo} color={color} activate={active}/>
-      <Semaforo time ={tiempo} color={color} activate={active2}/>
+      <Semaforo color={color} activate={active3}/>
+      <Semaforo color={color} activate={active}/>
+      <Semaforo color={color} activate={active2}/>
       </div>
   );
 }
