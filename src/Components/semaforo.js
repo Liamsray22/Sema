@@ -20,13 +20,13 @@ return(
         <div className="foto">
     <img src={img||Colors[props.color]} width="200px" height="200px"/>
     </div>
-{(props.activate)?
+{/* {(props.activate)?
     <div className="texto">
     <h1>{props.time}</h1>
     </div>
     :
     ''
-}
+} */}
     </div>
 )
 

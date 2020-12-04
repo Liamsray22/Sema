@@ -1,11 +1,4 @@
-.semaforo{
-    background-color: black;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex: auto;
-    color: aliceblue;
-}
+
 @font-face{
     font-family: FuenteDigital;
     src:url(../Components/fuentes/DS-DIGI.TTF);
@@ -23,17 +16,15 @@
     src:url(../Components/fuentes/DS-DIGIT.TTF);
 }
 
-.foto{
-    margin-left: 40%;
-    /* padding-right: 50%; */
-}
 
-/* .texto{
+.texto{
+    /* float: right; */
+    width: 100%;
+    background-color: black;
+    color: white;
     font-family: FuenteDigitalItalica;
     font-size: 30px;
-    margin-top: 2%;
-    margin-left: 2%;
+    /* margin-top: 2%;
+    margin-left: 2%; */
     display:inline-block;
-} */
-
-
+}
