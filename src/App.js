@@ -21,27 +21,27 @@ function App() {
 //Constantes
 
   var tiempo = time
-  var segundos = seconds
 
   axios.get('http://localhost:3001/Semaforo').then(
     function (response) {
-    console.log(response.data)
-    if(response.data == "Me presione"){
+    if(response.data == "Me presione" && color ==0){
+      console.log(response.data)
       window.location.reload()
     }
   }).catch(
     function (error) {
     console.log(error);
   });
+  var segundos = seconds
 
-  // useEffect(()=>{
+  useEffect(()=>{
     setTimeout(()=>{
     if(color==0){
         setColor(1)
         setActive(true)
         setActive2(false)
         setActive3(false)
-        setSeconds(30000)
+        setSeconds(5000)
     }
     else if(color==1){
         setColor(2)
@@ -57,12 +57,19 @@ function App() {
         setActive2(false)
         setActive(false)
         setSeconds(3000)
+        axios.post('http://localhost:3001/Bocina', {mensaje:"verde"}).then(
+          function (response) {
+          //console.log(response.data)
+        }).catch(
+          function (error) {
+          console.log(error);
+        });
 
     }
 
 },segundos)
 
-// },[color,tiempo])
+},[color,tiempo])
 
   return (
     <div className="App">
